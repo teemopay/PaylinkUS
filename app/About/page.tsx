@@ -181,11 +181,11 @@ export default function AboutPage() {
                   }}
                   isRequired
                   variant="bordered"
-                  errorMessage="Please enter your full Name"
+                  errorMessage="Please enter your full name"
                   label="Full Name"
                   labelPlacement="outside"
                   name="fullName"
-                  placeholder="Please enter your full Name"
+                  placeholder="Please enter your full name"
                   isClearable
                 />
                 <Input
@@ -298,7 +298,7 @@ export default function AboutPage() {
                   }}
                   isRequired
                   items={KnowData}
-                  label="How Did You Get To Know Us?*"
+                  label="How Did You Get To Know Us?"
                   labelPlacement="outside"
                   placeholder="Select"
                   name="howGetToKnowUs"

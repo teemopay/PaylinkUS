@@ -249,7 +249,7 @@ export const AppsList = [
   },
   {
     id: 5,
-    href: "mailto:super@PaylinkUS.com",
+    href: "mailto:support@paylinkus.io",
     target: "_blank",
   },
 ];

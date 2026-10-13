@@ -161,7 +161,7 @@ body {
 .navbar-link:hover,
 .navbar-link-active,
 .navbar-link.active {
-  color: #3b61b8;
+  color: #ff6600;
 }
 
 .navbar-link:hover::after,
@@ -220,7 +220,7 @@ body {
   color: white;
 }
 .navbar-child-item:hover {
-  color: #3b61b8;
+  color: #ff6600;
 }
 
 .line {
@@ -483,7 +483,7 @@ body {
 }
 
 .a-color-hover:hover {
-  color: #3b61b8;
+  color: #ff6600;
 }
 
 /* animate */

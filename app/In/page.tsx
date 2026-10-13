@@ -187,14 +187,14 @@ export default function InPage() {
                           <path
                             id="Vector 85"
                             d="M4.19629 13.5977H21.9649"
-                            stroke="#06421D"
+                            stroke="#FF6600"
                             strokeWidth="1.5"
                             strokeLinecap="round"
                           />
                           <path
                             id="Rectangle 589"
                             d="M13.5039 4.38477L22.7401 13.6209C22.7791 13.66 22.7791 13.7233 22.7401 13.7623L13.5039 22.9985"
-                            stroke="#06421D"
+                            stroke="#FF6600"
                             strokeWidth="1.5"
                             strokeLinecap="round"
                           />

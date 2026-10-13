@@ -73,7 +73,7 @@ export const FooterBlock = () => {
                 </div>
                 {i.child.map((s) => (
                   <NextLink
-                    className="block a-color-hover text-[14px] leading-[21px] text-white mb-[12px] md:mb-[16px] opacity-50 "
+                    className="block a-color-hover text-[14px] leading-[21px] text-[rgba(245,245,245,0.5)] mb-[12px] md:mb-[16px]"
                     key={s.id}
                     href={s.href}
                     target={s.target}
