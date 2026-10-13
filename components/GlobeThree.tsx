@@ -26,24 +26,24 @@ const locations = [
     lat: -12.0464,
     flag: "/images/country/pe-icon.png",
   },
-  {
-    name: "Indonesia",
-    lng: 106.8456,
-    lat: -6.2088,
-    flag: "/images/country/ind-icon.png",
-  },
+  // {
+  //   name: "Indonesia",
+  //   lng: 106.8456,
+  //   lat: -6.2088,
+  //   flag: "/images/country/ind-icon.png",
+  // },
   {
     name: "Pakistan",
     lng: 73.0479,
     lat: 33.6844,
     flag: "/images/country/pk-icon.png",
   },
-  {
-    name: "Brazil",
-    lng: -47.882778,
-    lat: -15.793889,
-    flag: "/images/country/brl-icon.png",
-  },
+  // {
+  //   name: "Brazil",
+  //   lng: -47.882778,
+  //   lat: -15.793889,
+  //   flag: "/images/country/brl-icon.png",
+  // },
 ];
 
 const Globe = () => {
@@ -61,7 +61,7 @@ const Globe = () => {
       75,
       container.offsetWidth / container.offsetHeight,
       0.5,
-      1000
+      1000,
     );
     camera.position.set(10, 0, 0);
 
@@ -122,7 +122,7 @@ const Globe = () => {
         });
       },
       undefined,
-      (err) => console.error("纹理加载失败:", err)
+      (err) => console.error("纹理加载失败:", err),
     );
 
     const animate = () => {
@@ -154,7 +154,7 @@ const Globe = () => {
 
   return (
     <div
-      className="relative  mx-auto w-[320px] h-[320px] md:w-[400px] md:h-[400px] mx-auto lg:w-[520px] lg:h-[520px] xl:w-[700px] xl:h-[700px] xl:mr-[30px]"
+      className="relative mx-auto h-[320px] w-[320px] md:h-[360px] md:w-[360px] lg:h-[480px] lg:w-[480px] 2xl:h-[700px] 2xl:w-[700px]"
       ref={containerRef}
     />
   );
@@ -163,7 +163,7 @@ const Globe = () => {
 const latLongToVector3 = (
   longitude: number,
   latitude: number,
-  radius: number
+  radius: number,
 ) => {
   const phi = (90 - latitude) * (Math.PI / 180);
   const theta = (longitude + 180) * (Math.PI / 180);
@@ -201,7 +201,7 @@ const scale = (
   inMin: number,
   inMax: number,
   outMin: number,
-  outMax: number
+  outMax: number,
 ) => ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 
 export default Globe;

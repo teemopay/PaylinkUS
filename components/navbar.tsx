@@ -11,7 +11,7 @@ export const Navbar = () => {
     base: "py-0 w-full",
     title: "font-normal text-medium",
     trigger: "px-0 py-[8px]   flex items-center bg-[#fff]",
-    indicator: "text-medium text-[#06421D]",
+    indicator: "text-medium text-[#FF6600]",
     content: "text-sm",
     titleWrapper: "bg-[#fff] text-[#000000]",
   };
@@ -43,27 +43,27 @@ export const Navbar = () => {
     children.forEach((c) => c.classList.remove("active"));
   };
   return (
-    <div className="w-full fixed navbar top-0 left-0  h-[68px] md:h-[88px] bg-[#06421D] z-[9999]">
+    <div className="w-full fixed navbar top-0 left-0  h-[68px] md:h-[88px] bg-[#142442] z-[9999]">
       {/* web端 */}
       <div
         className="hidden lg:block relative   w-full   h-[88px] "
         ref={wrapperRef}
       >
         <div className="w-full relative h-[88px] flex justify-center">
-          <div className="w-full relative h-full flex items-center justify-between max-w-[1500px] bg-[#06421D]  md:mx-[60px] box-border">
+          <div className="w-full relative h-full flex items-center justify-between max-w-[1200px] bg-[#142442]  md:mx-[60px] box-border">
             <NextLink className="block max-w-[275px] cursor-pointer" href="/">
               <Image
-                className="max-w-[339px]"
+                className="max-w-[223px]"
                 alt="HeroUI hero Image with delay"
-                height={62}
+                height={36}
                 src="/images/logo.png"
-                width={308}
+                width={223}
               />
             </NextLink>
 
             <div className="flex-1 text-right">
               <NextLink className="navbar-link " href="#">
-                Our solution
+                Solution
               </NextLink>
 
               <NextLink className="navbar-link" href="#">
@@ -85,9 +85,9 @@ export const Navbar = () => {
             </div>
           </div>
           {/* 子级菜单 */}
-          <div className="navbar-child  w-full absolute top-full flex justify-center">
-            <div className="w-full max-w-[1500px]  flex justify-start items-center">
-              <div className="navbar-child-title">Our solution</div>
+          <div className="navbar-child  w-full absolute top-full flex justify-center ">
+            <div className="w-full max-w-[1200px]  flex justify-start items-center">
+              <div className="navbar-child-title">Solution</div>
               <NextLink
                 className="navbar-child-item pr-[40px] md:pr-[60px]  xl:pr-[153px]"
                 href="/Payins"
@@ -105,7 +105,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="navbar-child  w-full absolute top-full flex justify-center">
-            <div className="w-full max-w-[1500px]  flex justify-start items-center">
+            <div className="w-full max-w-[1200px]  flex justify-start items-center">
               <div className="navbar-child-title">Resources</div>
               <NextLink
                 className="navbar-child-item pr-[40px] md:pr-[60px]  xl:pr-[153px]"
@@ -117,7 +117,7 @@ export const Navbar = () => {
             </div>
           </div>
           <div className="navbar-child  w-full absolute top-full flex justify-center">
-            <div className="w-full max-w-[1500px]  flex justify-start items-center">
+            <div className="w-full max-w-[1200px]  flex justify-start items-center">
               <div className="navbar-child-title">Company</div>
               <NextLink
                 className="navbar-child-item pr-[40px] md:pr-[60px]  xl:pr-[153px]"
@@ -146,16 +146,16 @@ export const Navbar = () => {
         </div>
       </div>
       {/* 移动端 */}
-      <div className=" lg:hidden h-full bg-[#06421D] flex items-center justify-between px-[20px] cursor-pointer">
+      <div className=" lg:hidden h-full bg-[#142442] flex items-center justify-between px-[20px] cursor-pointer">
         <NextLink className="block cursor-pointer" href="/">
           <Image
             classNames={{
-              img: "max-w-[177px] max-h-[33px] md:max-h-[63px]  md:max-w-[339px]",
+              img: "max-w-[177px] max-h-[33px] md:max-h-[36px]  md:max-w-[223px]",
             }}
             alt="HeroUI hero Image with delay"
-            height={63}
+            height={36}
             src="/images/logo.png"
-            width={339}
+            width={223}
           />
         </NextLink>
         <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">

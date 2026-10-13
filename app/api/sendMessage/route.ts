@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     if (!message) {
       return NextResponse.json(
         { error: "Message cannot be empty" },
-        { status: 400 }
+        { status: 400 },
       );
     }
     const {
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
       [
         {
           tag: "text",
-          text: `How can LegendPayer help your business? Feel free to ask anything: 【${help}】`,
+          text: `How can PaylinkUS help your business? Feel free to ask anything: 【${help}】`,
         },
       ],
       [
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
         content: {
           post: {
             zh_cn: {
-              title: "LegendPayer官网留言:",
+              title: "PaylinkUS官网留言:",
               content: params,
             },
           },
@@ -120,13 +120,13 @@ export async function POST(request: Request) {
       const errorData = await response.json();
       return NextResponse.json(
         { error: errorData },
-        { status: response.status }
+        { status: response.status },
       );
     }
   } catch (error) {
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

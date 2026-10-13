@@ -156,7 +156,7 @@ export const CardCountryConfig = [
 export const MobileNavbarList = [
   {
     title: "Solution",
-    label: "Our Solution",
+    label: "Solution",
     id: 1,
     child: [
       {
@@ -249,7 +249,7 @@ export const AppsList = [
   },
   {
     id: 5,
-    href: "mailto:super@legendpayer.com",
+    href: "mailto:super@PaylinkUS.com",
     target: "_blank",
   },
 ];

@@ -20,7 +20,7 @@ export const BlogPosts = () => {
             ease: [0.16, 1, 0.3, 1],
           }}
         >
-          <Card className="w-full rounded-xl bg-[#1C2025] md:h-[324px] p-[16px] mb-[22px]">
+          <Card className="w-full rounded-xl bg-[#F0F5FF] md:h-[324px] p-[16px] mb-[22px]">
             <div className="md:flex">
               <Image
                 alt="picture"
@@ -55,7 +55,7 @@ export const BlogPosts = () => {
                   <div className="text-base text-[#97989F] pl-[12px] pr-[20px]">
                     Mila
                   </div>
-                  <div className="text-base font-medium text-[#06421D]">
+                  <div className="text-base font-medium text-[#FF6600]">
                     March 25, 2025
                   </div>
                 </div>

@@ -53,7 +53,7 @@ export const subtitle = tv({
 });
 
 export const cardOne = tv({
-  base: `h-[412px] max-h-[412px] rounded-2xl pt-[78px] pr-[113px] pl-[53px] bg-[#1c2025]`,
+  base: `h-[412px] max-h-[412px] rounded-2xl pt-[78px] pr-[113px] pl-[53px] bg-[#F0F5FF]`,
   defaultVariants: {
     fullWidth: true,
   },

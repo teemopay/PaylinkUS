@@ -25,34 +25,28 @@ export default function ComplianceOfficer() {
           <PrimaryTitle
             className="hidden md:block md:pt-[150px] text-[#fff]"
             align="text-left"
-            title={
-              <>
-                Join Our Talent{" "}
-                <span className="hidden md:inline">
-                  {" "}
-                  <br />{" "}
-                </span>{" "}
-                Community
-              </>
-            }
-          />
+          >
+            Join Our Talent{" "}
+            <span className="hidden md:inline">
+              {" "}
+              <br />{" "}
+            </span>{" "}
+            Community
+          </PrimaryTitle>
         </PageWrap>
       </div>
       <PageWrap>
         <PrimaryTitle
           className="block md:hidden md:pt-[150px]"
           align="text-left"
-          title={
-            <>
-              Join Our Talent{" "}
-              <span className="hidden md:inline">
-                {" "}
-                <br />{" "}
-              </span>{" "}
-              Community
-            </>
-          }
-        />
+        >
+          Join Our Talent{" "}
+          <span className="hidden md:inline">
+            {" "}
+            <br />{" "}
+          </span>{" "}
+          Community
+        </PrimaryTitle>
       </PageWrap>
       <PageWrap>
         <div className="lg:flex items-start">
@@ -131,7 +125,7 @@ export default function ComplianceOfficer() {
                   <path
                     id="Vector"
                     d="M13.5001 17.3414C13.2924 17.3414 13.0847 17.2376 12.9809 17.1337L6.64625 11.0068C6.33471 10.6953 6.33471 10.1761 6.64625 9.86451C6.95779 9.55297 7.47702 9.55297 7.78856 9.86451L13.6039 15.4722L19.4193 9.86451C19.7309 9.55297 20.2501 9.55297 20.5616 9.86451C20.8732 10.1761 20.8732 10.6953 20.5616 11.0068L14.227 17.1337C13.9155 17.2376 13.7078 17.3414 13.5001 17.3414Z"
-                    fill="#009853"
+                    fill="#3B61B8"
                   />
                 </g>
               </svg>
@@ -158,7 +152,7 @@ export default function ComplianceOfficer() {
           <NextLink className="block" href="/About">
             <Button
               radius="full"
-              className="border-[1px] w-full md:w-[240px] border-[#06421D] bg-[#fff] text-[14px] md:text-[20px] text-[#06421D]"
+              className="border-[1px] w-full md:w-[240px] border-[#3B61B8] bg-[#fff] text-[14px] md:text-[20px] text-[#3B61B8]"
               variant="bordered"
             >
               See more about us

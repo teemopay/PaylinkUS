@@ -10,21 +10,27 @@ type Props = {
   mb?: string;
   className?: string;
 };
+
+type PrimaryTitleProps = {
+  children: React.ReactNode;
+  align?: string;
+  className?: string;
+};
 /* 
 font-weight: 600;
 font-size: 60px;
 line-height: 68px;
  */
 export const PrimaryTitle = ({
-  title,
   align = "text-center",
   className,
-}: Props) => {
+  children,
+}: PrimaryTitleProps) => {
   return (
     <div
       className={`font-semibold w-full text-[32px] leading-[37px]  md:text-6xl md:leading-[4.25rem] text-[#000] ${align} cursor-pointer ${className}`}
     >
-      {title}
+      {children}
     </div>
   );
 };
@@ -39,7 +45,7 @@ export const SubTitle = ({
 }: Props) => {
   return (
     <div
-      className={`w-full text-[12px] md:text-xl leading-[18px] md:leading-[2.25rem] text-[#000] ${align} cursor-pointer ${className}`}
+      className={`w-full text-[12px] md:text-xl leading-[18px] md:leading-[36px] text-[#000] ${align} cursor-pointer ${className}`}
     >
       {title}
     </div>
@@ -58,7 +64,7 @@ export const SecondaryTitle = ({
 }: Props) => {
   return (
     <div
-      className={`w-full text-[13px] leading-[18px] md:text-[1.75rem] font-medium  md:leading-[2.25rem] text-white ${align} cursor-pointer ${className}`}
+      className={`w-full text-[13px] leading-[18px] md:text-[1.75rem] font-medium  md:leading-[2.25rem] text-[#000000] ${align} cursor-pointer ${className}`}
     >
       {title}
     </div>
@@ -118,7 +124,7 @@ export const MediumTitle = ({
 }: Props) => {
   return (
     <div
-      className={`text-[14px] md:text-[20px]  leading-[23px] ${textColor} ${align} cursor-pointer ${className}`}
+      className={`text-[14px] md:text-[20px]  leading-[28px] ${textColor} ${align} cursor-pointer ${className}`}
     >
       {title}
     </div>
@@ -200,7 +206,7 @@ export const MediumXlTitle = ({
 }: Props) => {
   return (
     <div
-      className={`text-[22px] leading-[33px] md:text-6xl md:leading-[4.875rem] font-medium  text-white ${align} cursor-pointer ${className}`}
+      className={`text-[22px] leading-[33px] md:text-6xl md:leading-[4.875rem] font-medium  text-[#000000] ${align} cursor-pointer ${className}`}
     >
       {title}
     </div>
@@ -273,23 +279,22 @@ export const BgText = ({ title, sub, className }: Props) => {
     <div
       className={`relative overflow-hidden   sweep-away bg-text  w-full px-[20px] md:px-[60px] pt-[39px] md:pt-[71px]  pb-[37px] md:pb-[81px] ${className} z-[3]`}
     >
-      <div className="mb-[22px] mb-[24px]">
+      <div className=" mb-[24px]">
         <FadeIn>
-          <PrimaryTitle title={title} className="text-[#fff]" />
+          <PrimaryTitle className="text-[#fff]">{title}</PrimaryTitle>
         </FadeIn>
       </div>
       <FadeIn>
         <SubTitle title={sub} className="text-[#fff]" />
       </FadeIn>
-      <WaveThree></WaveThree>
     </div>
   );
 };
 
 export const CountrySub = ({ title, sub }: Props) => {
   return (
-    <div className="font-medium text-[12px] leading-[18px] md:text-[18px] md:leading-[36px] text-white">
-      <div className="text-[#009853] mb-[12px]">{title}</div>
+    <div className="font-medium text-[12px] leading-[18px] md:text-[18px] md:leading-[36px] text-[#000000]">
+      <div className="text-[#3B61B8] mb-[12px]">{title}</div>
       <div>{sub}</div>
     </div>
   );
@@ -360,7 +365,7 @@ export const JoinTitle = ({ title, className }: Props) => {
 /* 
 font-weight: 600;
 font-size: 22px;
-color: #009853;
+color: #3B61B8;
 line-height: 20px;
  */
 export const JoinSubTitle = ({ title, sub, className }: Props) => {
@@ -368,7 +373,7 @@ export const JoinSubTitle = ({ title, sub, className }: Props) => {
     <div
       className={`font-medium  text-[12px] leading-[16px] mb-[7px] text-left md:font-semibold md:text-[22px] md:leading-[20px] md:mb-[20px] text-[#000000] ${className}`}
     >
-      <span className="text-[#06421D]">{sub}</span>
+      <span className="text-[#3B61B8]">{sub}</span>
       {title}
     </div>
   );
@@ -377,14 +382,14 @@ export const JoinSubTitle = ({ title, sub, className }: Props) => {
 /* 
 font-weight: 600;
 font-size: 22px;
-color: #009853;
+color: #3B61B8;
 line-height: 20px;
  */
 
 export const JoinDecTitle = ({ title, className }: Props) => {
   return (
     <div
-      className={`font-medium  text-[13px] leading-[20px] mb-[14px] text-left md:font-semibold text-[22px] leading-[20px] md:mb-[10px] text-[#06421D] ${className}`}
+      className={`font-medium   mb-[14px] text-left md:font-semibold  leading-[20px] md:mb-[10px] text-[#3B61B8] ${className}`}
     >
       {title}
     </div>
@@ -406,10 +411,10 @@ export const Applytext = ({ className }: Props) => {
     <div
       className={`text-[12px] leading-[14px] text-left md:text-[22px] md:leading-[26px] text-[#000] mb-[83px] mb:mb-[110px] ${className}`}
     >
-      <span className="font-medium text-[#06421D]">📩 How to Apply: </span>
+      <span className="font-medium text-[#3B61B8]">📩 How to Apply: </span>
       Please send your resume to [
-      <a className="text-[#06421D]" href="mailto:service@LegendPayer.com">
-        service@LegendPayer.com
+      <a className="text-[#3B61B8]" href="mailto:support@paylinkus.io">
+        support@paylinkus.io
       </a>
       ] with the subject line: "Application for Senior Global Business
       Development – [Your Name]".
@@ -420,7 +425,7 @@ export const Applytext = ({ className }: Props) => {
 export const OtherJobs = ({ title, className }: Props) => {
   return (
     <div
-      className={`font-medium text-[12px] leading-[16px] text-[#06421D]  md:text-[18px] md:leading-[16px] ${className}`}
+      className={`font-medium text-[12px] leading-[16px] text-[#3B61B8]  md:text-[18px] md:leading-[16px] ${className}`}
     >
       {title}
     </div>

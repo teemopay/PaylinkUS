@@ -213,14 +213,14 @@ export const HomeArrow = ({ className }: Props) => (
           <path
             id="Vector 85"
             d="M4.06055 13.4951H21.8237"
-            stroke="white"
+            stroke="#FF6600"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
           <path
             id="Rectangle 589"
             d="M13.3652 4.28418L22.5986 13.5175C22.6376 13.5566 22.6376 13.6199 22.5986 13.6589L13.3652 22.8923"
-            stroke="white"
+            stroke="#FF6600"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
@@ -246,28 +246,28 @@ export const StepOne: React.FC<IconSvgProps> = ({ ...props }) => {
           cx="26.7113"
           cy="26.1175"
           r="26.0667"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <circle
           id="Ellipse 292"
           cx="26.7113"
           cy="78.2503"
           r="26.0667"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <circle
           id="Ellipse 291"
           cx="78.845"
           cy="26.1175"
           r="26.0667"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <circle
           id="Ellipse 293"
           cx="78.845"
           cy="78.2503"
           r="26.0667"
-          fill="#22B773"
+          fill="#3B61B8"
         />
       </g>
     </svg>
@@ -289,14 +289,14 @@ export const StepTwo: React.FC<IconSvgProps> = ({ ...props }) => {
           width="30.1134"
           height="104.239"
           transform="matrix(0.707107 0.707107 0.707107 -0.707107 0.00585938 83.0234)"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Union"
           fillRule="evenodd"
           clipRule="evenodd"
           d="M0.0341797 30.1642V0.0507858L104.273 0.0507812V30.1642H104.272V104.289H74.159V30.1642L0.0341797 30.1642Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
       </g>
     </svg>
@@ -320,12 +320,12 @@ export const StepThree: React.FC<IconSvgProps> = ({ ...props }) => {
           width="30.1216"
           height="104.267"
           transform="rotate(90 104.634 0.0507812)"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Rectangle 976"
           d="M104.634 37.123L104.634 67.2446L0.366866 67.2446L0.366867 37.123L104.634 37.123Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <rect
           id="Rectangle 977"
@@ -334,7 +334,7 @@ export const StepThree: React.FC<IconSvgProps> = ({ ...props }) => {
           width="30.1216"
           height="104.267"
           transform="rotate(90 104.634 74.1953)"
-          fill="#22B773"
+          fill="#3B61B8"
         />
       </g>
     </svg>
@@ -356,14 +356,14 @@ export const StepFour: React.FC<IconSvgProps> = ({ ...props }) => {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M0.726562 0.0488281C0.726562 0.0493889 0.726562 0.0499496 0.726562 0.0505104C0.726562 28.843 24.0675 52.184 52.86 52.184C81.6525 52.184 104.993 28.843 104.993 0.0505104C104.993 0.0499496 104.993 0.0493889 104.993 0.0488281H0.726562Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Subtract_2"
           fillRule="evenodd"
           clipRule="evenodd"
           d="M104.994 104.318C104.994 104.318 104.994 104.317 104.994 104.317C104.994 75.5242 81.6532 52.1832 52.8607 52.1832C24.0682 52.1832 0.727221 75.5242 0.727219 104.317C0.727219 104.317 0.727219 104.318 0.727219 104.318L104.994 104.318Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
       </g>
     </svg>
@@ -383,22 +383,22 @@ export const StepFive: React.FC<IconSvgProps> = ({ ...props }) => {
         <path
           id="Rectangle 979"
           d="M0.0878906 0.0507812H1.22134C29.3879 0.0507812 52.2214 22.8843 52.2214 51.0508V52.1842H0.0878906V0.0507812Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Rectangle 981"
           d="M0.0878906 52.1836H1.22134C29.3879 52.1836 52.2214 75.0171 52.2214 103.184V104.317H0.0878906V52.1836Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Rectangle 980"
           d="M52.2207 0.0507812H53.3542C81.5207 0.0507812 104.354 22.8843 104.354 51.0508V52.1842H52.2207V0.0507812Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
         <path
           id="Rectangle 982"
           d="M52.2217 52.1836H53.3551C81.5217 52.1836 104.355 75.0171 104.355 103.184V104.317H52.2217V52.1836Z"
-          fill="#22B773"
+          fill="#3B61B8"
         />
       </g>
     </svg>

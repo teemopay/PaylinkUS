@@ -1,7 +1,6 @@
 import { PageWrap, CountryButton } from "@/components/PageWrap";
 import {
   PrimaryTitle,
-  SubTitle,
   MediumXlTitle,
   CountrySub,
   MinTitle,
@@ -11,15 +10,10 @@ import {
 import { Image } from "@heroui/image";
 import { BtnLink } from "@/components/BtnLink";
 import countryObj from "@/config/country";
-import { CardWrap } from "@/components/ProgressBlock";
-
-import {
-  CircularProgress,
-  MobileCircularProgress,
-  CountrySelect,
-} from "@/components/ProgressBlock";
+import { CountrySelect } from "@/components/ProgressBlock";
 import { FadeIn } from "@/components/Animateitem";
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import { SecondSection } from "@/components/Country";
 
 export default function COPage() {
   const currentObj = countryObj["CO"];
@@ -29,21 +23,16 @@ export default function COPage() {
         <PageWrap>
           <div className="pt-[30px] md:pt-[152px]">
             <div className="flex flex-col md:flex-row items-center md:items-end md:justify-between md:mb-[80px] mb-[30px] md:pl-[41px]">
-              <PrimaryTitle
-                title={
-                  <>
-                    <TypingAnimation className="min-h-[37px] md:min-h-[68px] font-semibold w-full text-[32px] leading-[37px]  md:text-6xl md:leading-[4.25rem]">
-                      {currentObj.title}
-                    </TypingAnimation>
-                  </>
-                }
-                className="md:text-left text-center mb-[26px] md:mb-0"
-              />
+              <PrimaryTitle className="md:text-left text-center mb-[26px] md:mb-0">
+                <TypingAnimation className="min-h-[37px] md:min-h-[68px] font-semibold w-full text-[32px] leading-[37px]  md:text-6xl md:leading-[4.25rem]">
+                  {currentObj.title}
+                </TypingAnimation>
+              </PrimaryTitle>
               <div className="w-[183px] md:min-w-[227px]">
                 <CountrySelect country="Colombia" />
               </div>
             </div>
-            <div className="country-bg grid grid-cols-1 md:grid-cols-2 gap-x-[20px] pl-[22px] pr-[12px] pb-[36px] pt-[18px] md:pl-[46px] pr-[50px] pb-[46px] md:pt-[30px]  rounded-[20px]">
+            <div className="country-bg grid grid-cols-1 md:grid-cols-2 gap-x-[20px] pl-[22px]   pt-[18px] md:pl-[46px] pr-[50px] pb-[46px] md:pt-[30px]  rounded-[20px]">
               <div>
                 <div className="flex items-center justify-center flex-wrap md:block mb-[8px]  md:mb-[43px]">
                   <MinTwoTitle
@@ -100,58 +89,13 @@ export default function COPage() {
         </PageWrap>
       </div>
       <PageWrap>
-        <FadeIn>
-          <PrimaryTitle
-            className="mb-[20px] md:mb-[33px]"
-            title={currentObj.second.title}
-          />
-        </FadeIn>
-        <FadeIn>
-          <SubTitle
-            className="max-w-[1496px] mb-[28px] md:mb-[80px]"
-            title={currentObj.second.sub}
-          />
-        </FadeIn>
-        <FadeIn>
-          <section id="progress" className="mb-[10px] md:mb-[148px] ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[40px] lg:gap-x-[20px]  xl:gap-x-[80px] gap-y-[10px] rounded-2xl  md:rounded-3xl">
-              {currentObj.second.list.map((i) => (
-                <CardWrap key={i.id}>
-                  <div
-                    className="flex items-center justify-center country-card-progress w-[234px] h-[234px] md:w-[300px] md:h-[300px]  mx-auto"
-                    style={{
-                      backgroundImage: `url('/images/country/card-${i.id}.png')`,
-                    }}
-                  >
-                    <CircularProgress
-                      key="web"
-                      className="hidden md:block"
-                      r={103}
-                      value={i.count}
-                      gradientTransform={i.gradientTransform}
-                    />
-                    <MobileCircularProgress
-                      className="block md:hidden"
-                      value={i.count}
-                      gradientTransform={i.gradientTransform}
-                    />
-                  </div>
-                  <div className="flex items-center flex-col mt-[14px] md:mt-[12px]">
-                    <div className="font-semibold text-[30px] leading-[36px] mb-[11px] md:text-[36px] md:leading-[36px] ms:mb-[12px] text-white">
-                      {i.count}%
-                    </div>
-                    <div className="text-white text-[12px] leading-[24px] md:text-[16px] md:leading-[24px]">
-                      {i.title}
-                    </div>
-                  </div>
-                </CardWrap>
-              ))}
-            </div>
-          </section>
-        </FadeIn>
+        <SecondSection
+          sub={currentObj.second.sub}
+          list={currentObj.second.list}
+        />
         <FadeIn>
           <section id="pay-way" className=" mb-[107px] md:mb-[77px]">
-            <div className="lg:flex items-center justify-between  rounded-3xl  bg-[#1C2025] p-[20px] md:pl-[37px] md:pr-[37px] md:py-[57]">
+            <div className="lg:flex items-center justify-between  rounded-3xl  bg-[#F0F5FF] p-[20px] md:pl-[37px] md:pr-[37px] md:py-[57]">
               <div className="lg:max-w-[597px] lg:min-w-[597px] md:mr-[40px]">
                 <MediumXlTitle
                   className="mb-[20px] md:mb-[18px]"
@@ -164,18 +108,18 @@ export default function COPage() {
               <div className="flex flex-1  items-center justify-center lg:max-w-[730px]  mb-[22px] lg:mb-0  mt-[30px] lg:mt-0 ">
                 <Image
                   classNames={{
-                    img: "min-h-[63px] min-w-[143px]   md:max-h-[202px] md:max-w-[449px]",
+                    img: "max-w-[652px] max-h-[434px]",
                   }}
                   alt="country"
                   height="100%"
-                  src="/images/country/co-way.png"
+                  src="/images/country/pay.png"
                   width="100%"
                 />
               </div>
             </div>
           </section>
         </FadeIn>
-        <div className="mb-[71px] md:mb-[202px]">
+        <div className="mb-[71px] md:mb-[128px]">
           <BtnLink />
         </div>
       </PageWrap>

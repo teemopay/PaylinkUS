@@ -47,7 +47,7 @@ export const CardCountry = () => {
         {CardCountryConfig.map((i) => (
           <Card
             key={i.id}
-            className="figure w-[279px] min-w-[279px] md:h-[335px] relative cursor-pointer rounded-2xl shadow-none"
+            className="figure w-[279px] min-w-[279px] md:h-[335px] relative cursor-pointer overflow-hidden rounded-2xl shadow-none"
           >
             <Image
               removeWrapper
@@ -58,6 +58,7 @@ export const CardCountry = () => {
               }}
               src={`/images/home/${i.code}.png`}
             />
+            <div className="figure-gradient pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[170px]" />
             <CardFooter className="absolute  bottom-0 border-zinc-100/50 z-10 p-[12px]">
               <div className="w-full flex items-center">
                 <Image

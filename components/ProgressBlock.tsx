@@ -47,9 +47,9 @@ export const CountrySelect = ({ country }: Props) => {
     router.push(url || "/");
   };
   return (
-    <Dropdown className="custome-menu" onOpenChange={setOpen}>
+    <Dropdown className="custome-menu" disableAnimation onOpenChange={setOpen}>
       <DropdownTrigger>
-        <div className="flex items-center justify-center  rounded-full w-[183px] md:w-[227px] h-[40px] md:h-[48px]  bg-white text-[#06421D] text-[16px] md:text-[20px] font-medium border-[#06421D] border-[3px]">
+        <div className="flex items-center justify-center  rounded-full w-[183px] md:w-[227px] h-[40px] md:h-[48px]  bg-white text-[#3B61B8] text-[16px] md:text-[20px] font-medium border-[#3B61B8] border-[3px]">
           <span className="inline-block  text-center">{country}</span>
           <svg
             className={`  select-country  ${open ? "menu-open" : "menu-close"}`}
@@ -127,7 +127,7 @@ export const CircularProgress = ({
           gradientTransform={gradientTransform}
         >
           <stop offset="0" stopColor="#3DFFA7" stopOpacity="0.8" />
-          <stop offset="61%" stopColor="#009853" stopOpacity="0.8" />
+          <stop offset="61%" stopColor="#3B61B8" stopOpacity="0.8" />
           <stop offset="100%" stopColor="#014727" stopOpacity="0.8" />
         </linearGradient>
       </defs>
@@ -183,7 +183,7 @@ export const MobileCircularProgress = ({
           gradientTransform={gradientTransform}
         >
           <stop offset="0" stopColor="#3DFFA7" stopOpacity="0.8" />
-          <stop offset="61%" stopColor="#009853" stopOpacity="0.8" />
+          <stop offset="61%" stopColor="#3B61B8" stopOpacity="0.8" />
           <stop offset="100%" stopColor="#014727" stopOpacity="0.8" />
         </linearGradient>
       </defs>
@@ -212,34 +212,41 @@ export const MobileCircularProgress = ({
 };
 
 export const MinProgress = ({ value = 0, className }: Props) => {
-  const r = 23;
-  const strokeDasharray = 2 * r * Math.PI;
-  const strokeDashoffset = (1 - value / 100) * 2 * Math.PI * r;
+  const r = 17.7369;
+  const circumference = 2 * Math.PI * r;
+  const strokeDashoffset = circumference - (circumference * value) / 100;
   return (
-    <svg className={`${className} comment-progress`} width="58px" height="58px">
+    <motion.svg
+      initial="hidden"
+      whileInView="visible"
+      className={`${className ?? ""} h-[39px] w-[39px] comment-progress`}
+      viewBox="0 0 39 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle
-        cx="50%"
-        cy="50%"
-        r={27}
+        id="Ellipse 254"
+        cx="19.4244"
+        cy="19.4283"
+        r="17.7369"
         stroke="#E5E5E5"
-        strokeWidth={2}
+        strokeWidth={3}
         fill="none"
       />
       <motion.circle
-        cx="50%"
-        cy="50%"
-        r={27}
-        stroke="#4CAF50"
-        strokeWidth={2}
+        cx="19.4244"
+        cy="19.4283"
+        r={r}
+        stroke="#3B61B8"
+        strokeWidth="3"
         fill="none"
         strokeLinecap="round"
-        strokeDasharray={strokeDasharray}
+        strokeDasharray={circumference}
         strokeDashoffset={strokeDashoffset}
-        initial={{ strokeDashoffset: strokeDasharray }}
+        initial={{ strokeDashoffset: circumference }}
         transition={{
-          duration: 3,
-          ease: [0.16, 1, 0.3, 1],
-          delay: 0.1,
+          duration: 0.8,
+          ease: "easeInOut",
         }}
         whileInView={{ strokeDashoffset }}
       />
@@ -247,16 +254,15 @@ export const MinProgress = ({ value = 0, className }: Props) => {
       <g id="Frame">
         <path
           id="Vector"
-          d="M37.2542 27.1082H20.7324M20.7324 25.3558V32.7551C20.7324 33.8457 20.7324 34.391 20.9125 34.8075C21.0709 35.1739 21.3236 35.4718 21.6345 35.6584C21.9879 35.8707 22.4506 35.8707 23.3759 35.8707H34.6107C35.536 35.8707 35.9987 35.8707 36.3521 35.6584C36.6629 35.4718 36.9157 35.1739 37.0741 34.8075C37.2542 34.391 37.2542 33.8457 37.2542 32.7551V25.3558C37.2542 24.2652 37.2542 23.72 37.0741 23.3034C36.9157 22.937 36.6629 22.6392 36.3521 22.4525C35.9987 22.2402 35.536 22.2402 34.6107 22.2402H23.3759C22.4506 22.2402 21.9879 22.2402 21.6345 22.4525C21.3237 22.6391 21.0709 22.937 20.9125 23.3034C20.7324 23.72 20.7324 24.2652 20.7324 25.3558Z"
-          stroke="#009853"
+          d="M25.0545 17.9548H13.793M13.793 16.7603V21.8039C13.793 22.5472 13.793 22.9189 13.9157 23.2028C14.0237 23.4525 14.196 23.6556 14.4079 23.7828C14.6488 23.9275 14.9641 23.9275 15.5948 23.9275H23.2526C23.8833 23.9275 24.1987 23.9275 24.4396 23.7828C24.6515 23.6556 24.8238 23.4525 24.9317 23.2028C25.0545 22.9189 25.0545 22.5472 25.0545 21.8039V16.7603C25.0545 16.017 25.0545 15.6453 24.9317 15.3614C24.8238 15.1117 24.6515 14.9086 24.4396 14.7814C24.1987 14.6367 23.8833 14.6367 23.2526 14.6367H15.5948C14.9641 14.6367 14.6488 14.6367 14.4079 14.7814C14.196 14.9086 14.0237 15.1117 13.9157 15.3614C13.793 15.6453 13.793 16.017 13.793 16.7603Z"
+          stroke="#3B61B8"
           strokeWidth="1.3"
           strokeLinecap="round"
           strokeLinejoin="round"
-          fill="#1C2025"
-          transform="rotate(-270 29 29)"
+          transform="rotate(-90 19.5 19.5)"
         />
       </g>
-    </svg>
+    </motion.svg>
   );
 };
 
@@ -300,7 +306,7 @@ export const MobileMinProgress = ({ value = 0, className }: Props) => {
         <path
           id="Vector"
           d="M20.6386 14.7896H11.3633M11.3633 13.8057V17.9597C11.3633 18.572 11.3633 18.8781 11.4644 19.1119C11.5533 19.3176 11.6952 19.4849 11.8697 19.5897C12.0681 19.7088 12.3279 19.7088 12.8473 19.7088H19.1546C19.6741 19.7088 19.9338 19.7088 20.1322 19.5897C20.3067 19.4849 20.4486 19.3176 20.5375 19.1119C20.6386 18.8781 20.6386 18.572 20.6386 17.9597V13.8057C20.6386 13.1935 20.6386 12.8874 20.5375 12.6535C20.4486 12.4478 20.3067 12.2806 20.1322 12.1758C19.9338 12.0566 19.6741 12.0566 19.1546 12.0566H12.8473C12.3279 12.0566 12.0681 12.0566 11.8697 12.1758C11.6952 12.2806 11.5533 12.4478 11.4644 12.6535C11.3633 12.8874 11.3633 13.1935 11.3633 13.8057Z"
-          stroke="#009853"
+          stroke="#3B61B8"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="#1C2025"
@@ -452,7 +458,7 @@ export const MXIcon = ({ value = 0, className }: Props) => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#3DFFA7" />
-          <stop offset="0.60932" stopColor="#009853" />
+          <stop offset="0.60932" stopColor="#3B61B8" />
           <stop offset={1} stopColor="#014727" />
         </linearGradient>
       </defs>

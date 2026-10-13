@@ -15,7 +15,7 @@ import { FadeIn } from "@/components/Animateitem";
 
 const title = "Your Trusted Global Payment Solutions Provider";
 const sub =
-  "LegendPayer has been a prominent player in the payment gateway industry . As a leading global payment processing service and solutions provider, we specialize in facilitating secure and efficient transactions for a diverse range of clients. From small family-owned businesses to large corporations and established conglomerates, we offer tailored payment solutions to meet their specific needs.";
+  "PaisaGateway has been a prominent player in the payment gateway industry . As a leading global payment processing service and solutions provider, we specialize in facilitating secure and efficient transactions for a diverse range of clients. From small family-owned businesses to large corporations and established conglomerates, we offer tailored payment solutions to meet their specific needs.";
 const VolumeData = [
   { key: "USD(0-500K)", label: "USD 0-500K" },
   { key: "USD(501K-1M)", label: "USD 501K-1M" },
@@ -56,6 +56,31 @@ const IndustryData = [
   { key: "In-APP", label: "In-APP" },
   { key: "Others", label: "Others" },
 ];
+
+const inputWrapperClass =
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F0F5FF] group-data-[focus=true]:border-[#3B61B8] data-[focus=true]:border-[#3B61B8]";
+const textareaWrapperClass =
+  "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] group-data-[focus=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] group-data-[focus=true]:border-[#3B61B8] data-[focus=true]:border-[#3B61B8]";
+const inputClass = "!text-[#000000] placeholder:!text-[#BEBEBE]";
+const selectTriggerClass =
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] data-[open=true]:!bg-[#F0F5FF] data-[focus=true]:border-[#3B61B8] data-[open=true]:border-[#3B61B8]";
+const selectValueClass =
+  "!text-[#000000] data-[placeholder=true]:!text-[#BEBEBE] group-data-[has-value=false]:!text-[#BEBEBE]";
+const selectItemClasses = [
+  "rounded-sm",
+  "text-[16px]",
+  "text-[#000000]",
+  "data-[hover=true]:bg-[#3B61B8]",
+  "data-[hover=true]:text-white",
+  "data-[selectable=true]:focus:bg-[#3B61B8]",
+  "data-[selectable=true]:focus:text-white",
+  "data-[selected=true]:bg-[#3B61B8]",
+  "data-[selected=true]:text-white",
+  "data-[pressed=true]:opacity-100",
+];
+const checkboxWrapperClass =
+  "border-[#3B61B8] group-data-[selected=true]:border-[#3B61B8] group-data-[selected=true]:bg-[#3B61B8]";
+
 export default function AboutPage() {
   const [submitted, setSubmitted] = useState(null);
   const [isOpen, setOpen] = useState(false);
@@ -93,7 +118,7 @@ export default function AboutPage() {
       <div className="country-head-bg  min-h-[172px] md:min-h-[660px] mb-[62px] md:mb-[142px] rounded-none bg-[url('/images/about/head.png')]"></div>
       <PageWrap>
         <FadeIn>
-          <PrimaryTitle className="mb-[15px] md:mb-[2px]" title={title} />
+          <PrimaryTitle className="mb-[15px] md:mb-[2px]">{title}</PrimaryTitle>
         </FadeIn>
         <FadeIn>
           <SubTitle className="mb-[40px] md:mb-[69px]" title={sub} />
@@ -136,10 +161,9 @@ export default function AboutPage() {
         </FadeIn>
         <div id="concat" className="mb-[80px] md:mb-[140px]"></div>
         <FadeIn>
-          <PrimaryTitle
-            className="mb-[68px] md:mb-[100px]"
-            title="contact us"
-          />
+          <PrimaryTitle className="mb-[68px] md:mb-[100px]">
+            Contact PaylinkUS
+          </PrimaryTitle>
         </FadeIn>
         <section className="mb-[174px] md:mb-[184px]" id="form">
           <div className="max-w-[1068px] mx-auto">
@@ -150,8 +174,8 @@ export default function AboutPage() {
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px]  md:!translate-y-[-70px] !text-[#000]",
-                    inputWrapper:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px]  rounded-[8px] bg-[#F1F7F4]",
+                    inputWrapper: inputWrapperClass,
+                    input: inputClass,
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -170,8 +194,8 @@ export default function AboutPage() {
                   classNames={{
                     label:
                       "after:text-[#000]  text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
-                    inputWrapper:
-                      "border-[#E9E9E9]  border-[1px] h-[42px] md:h-[60px]  rounded-[8px] bg-[#F1F7F4]",
+                    inputWrapper: inputWrapperClass,
+                    input: inputClass,
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -192,8 +216,8 @@ export default function AboutPage() {
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
-                    inputWrapper:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px]  rounded-[8px] bg-[#F1F7F4]",
+                    inputWrapper: inputWrapperClass,
+                    input: inputClass,
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -212,8 +236,8 @@ export default function AboutPage() {
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
-                    inputWrapper:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px]  rounded-[8px] bg-[#F1F7F4]",
+                    inputWrapper: inputWrapperClass,
+                    input: inputClass,
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -230,14 +254,16 @@ export default function AboutPage() {
               </div>
               <div className="w-full  grid grid-cols-1 md:grid-cols-2 md:gap-x-[32px] ">
                 <Select
+                  disableAnimation
                   label="Industry-contact us"
                   labelPlacement="outside"
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
-                    trigger:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F1F7F4]",
+                    trigger: selectTriggerClass,
+                    value: selectValueClass,
+                    popoverContent: "bg-[#F0F5FF]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -250,15 +276,7 @@ export default function AboutPage() {
                   variant="bordered"
                   listboxProps={{
                     itemClasses: {
-                      base: [
-                        "rounded-sm",
-                        "text-[16px]",
-                        "data-[hover=true]:text-[#06421D]",
-                        "data-[hover=true]:bg-default-100",
-                        "dark:data-[hover=true]:bg-[#06421D]",
-                        "data-[selectable=true]:focus:bg-[#06421D]",
-                        "data-[pressed=true]:opacity-1",
-                      ],
+                      base: selectItemClasses,
                     },
                   }}
                 >
@@ -267,12 +285,14 @@ export default function AboutPage() {
                   )}
                 </Select>
                 <Select
+                  disableAnimation
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
-                    trigger:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F1F7F4]",
+                    trigger: selectTriggerClass,
+                    value: selectValueClass,
+                    popoverContent: "bg-[#F0F5FF]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -286,15 +306,7 @@ export default function AboutPage() {
                   errorMessage="Please Select "
                   listboxProps={{
                     itemClasses: {
-                      base: [
-                        "rounded-sm",
-                        "text-[16px]",
-                        "data-[hover=true]:text-[#06421D]",
-                        "data-[hover=true]:bg-default-100",
-                        "dark:data-[hover=true]:bg-[#06421D]",
-                        "data-[selectable=true]:focus:bg-[#06421D]",
-                        "data-[pressed=true]:opacity-1",
-                      ],
+                      base: selectItemClasses,
                     },
                   }}
                 >
@@ -305,12 +317,14 @@ export default function AboutPage() {
               </div>
               <div className="w-full">
                 <Select
+                  disableAnimation
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
                       "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
-                    trigger:
-                      "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F1F7F4]",
+                    trigger: selectTriggerClass,
+                    value: selectValueClass,
+                    popoverContent: "bg-[#F0F5FF]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -324,15 +338,7 @@ export default function AboutPage() {
                   errorMessage="Please Select "
                   listboxProps={{
                     itemClasses: {
-                      base: [
-                        "rounded-sm",
-                        "text-[16px]",
-                        "data-[hover=true]:text-[#06421D]",
-                        "data-[hover=true]:bg-default-100",
-                        "dark:data-[hover=true]:bg-[#06421D]",
-                        "data-[selectable=true]:focus:bg-[#06421D]",
-                        "data-[pressed=true]:opacity-1",
-                      ],
+                      base: selectItemClasses,
                     },
                   }}
                 >
@@ -343,13 +349,15 @@ export default function AboutPage() {
               </div>
 
               <Select
+                disableAnimation
                 isRequired
                 className="!mt-0 mb-[66px] md:mb-[52px]"
                 classNames={{
                   label:
                     "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
-                  trigger:
-                    "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F1F7F4]",
+                  trigger: selectTriggerClass,
+                  value: selectValueClass,
+                  popoverContent: "bg-[#F0F5FF]",
                   mainWrapper: "relative",
                   helperWrapper: "absolute top-full w-full",
                   errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -362,15 +370,7 @@ export default function AboutPage() {
                 errorMessage="Please Select "
                 listboxProps={{
                   itemClasses: {
-                    base: [
-                      "rounded-sm",
-                      "text-[16px]",
-                      "data-[hover=true]:text-[#06421D]",
-                      "data-[hover=true]:bg-default-100",
-                      "dark:data-[hover=true]:bg-[#06421D]",
-                      "data-[selectable=true]:focus:bg-[#06421D]",
-                      "data-[pressed=true]:opacity-1",
-                    ],
+                    base: selectItemClasses,
                   },
                 }}
               >
@@ -395,6 +395,7 @@ export default function AboutPage() {
                   value="LatinAmercia"
                   radius="sm"
                   className="mr-[20px] md:mr-[70px]"
+                  classNames={{ wrapper: checkboxWrapperClass }}
                   size="sm"
                 >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
@@ -405,6 +406,7 @@ export default function AboutPage() {
                   value="MiddleEast"
                   radius="sm"
                   className="mr-[20px] md:mr-[70px]"
+                  classNames={{ wrapper: checkboxWrapperClass }}
                   size="sm"
                 >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
@@ -415,6 +417,7 @@ export default function AboutPage() {
                   value="Asia"
                   radius="sm"
                   className="mr-[20px] md:mr-[70px]"
+                  classNames={{ wrapper: checkboxWrapperClass }}
                   size="sm"
                 >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
@@ -426,6 +429,7 @@ export default function AboutPage() {
                   value="Africa"
                   radius="sm"
                   className="mr-[20px] md:mr-[70px]"
+                  classNames={{ wrapper: checkboxWrapperClass }}
                   size="sm"
                 >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
@@ -436,6 +440,7 @@ export default function AboutPage() {
                   value="NorthAmerica"
                   radius="sm"
                   className="mr-[20px] md:mr-[70px]"
+                  classNames={{ wrapper: checkboxWrapperClass }}
                   size="sm"
                 >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
@@ -443,7 +448,12 @@ export default function AboutPage() {
                     North America
                   </span>
                 </Checkbox>
-                <Checkbox value="Europe" radius="sm" size="sm">
+                <Checkbox
+                  classNames={{ wrapper: checkboxWrapperClass }}
+                  radius="sm"
+                  size="sm"
+                  value="Europe"
+                >
                   <span className="text-[12px] md:text-[18px] text-[#000]">
                     {" "}
                     Europe
@@ -456,12 +466,12 @@ export default function AboutPage() {
                 classNames={{
                   label:
                     "after:text-[#000] text-[#fff]  text-[12px] md:text-[18px] pb-[13px] md:pb-[10px] !text-[#000]",
-                  inputWrapper:
-                    "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] bg-[#F1F7F4]",
+                  inputWrapper: textareaWrapperClass,
+                  input: inputClass,
                   errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
                 }}
                 className="w-full mb-[18px] md:mb-[52px]"
-                label="How can LegendPayer help your business? Feel free to ask anything."
+                label="How can PaylinkUS help your business? Feel free to ask anything."
                 labelPlacement="outside"
                 name="help"
                 errorMessage="Please Enter"
@@ -477,33 +487,33 @@ export default function AboutPage() {
                   className="leading-[21px]"
                   classNames={{
                     base: "items-start",
-                    wrapper: "w-[16px] h-[16px] rounded-sm",
+                    wrapper: `w-[16px] h-[16px] rounded-sm ${checkboxWrapperClass}`,
                   }}
                   value={"true"}
                 >
                   <div className="text-[12px] md:text-[18px]  leading-[16px] text-[#000]">
                     By checking this box, you agree to receive marketing emails
-                    from LegendPayer. You may unsubscribe at any time.{" "}
+                    from PaylinkUS. You may unsubscribe at any time.{" "}
                   </div>
                 </Checkbox>
               </CheckboxGroup>
               <div className="text-[12px] leading-[14px] md:text-[18px] md:leading-[21px]  mb-[58px] md:mb-[94px] text-[#000]">
                 By submitting your information you confirm that you have read
-                LegendPayer
+                PaylinkUS
                 <Link
                   href="/support/Privacy_Policy.pdf"
                   target="_blank"
-                  className="px-[4px] underline  text-[12px] md:text-[18px] text-[#06421D]"
+                  className="px-[4px] underline  text-[12px] md:text-[18px] text-[#FF6600]"
                 >
                   Privacy Policy
                 </Link>
-                and agree to the use of your data in all LegendPayer
+                and agree to the use of your data in all PaylinkUS
                 communications.
               </div>
               <div className="w-full flex items-center justify-center">
                 <Button
                   type="submit"
-                  className="w-full md:w-[240px] md:h-[48px] md:text-[20px] bg-[#06421D]"
+                  className="w-full md:w-[240px] md:h-[48px] md:text-[20px] bg-[#3B61B8]"
                   radius="full"
                 >
                   Submit

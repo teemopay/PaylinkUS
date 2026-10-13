@@ -1,6 +1,6 @@
 .btn-link {
   position: relative;
-  background: var(--color--1C2025);
+  background: #3b61b8;
   border-radius: 16px;
   cursor: pointer;
   color: #ffffff;
@@ -17,7 +17,7 @@
   opacity: 0;
   height: 100%;
   width: 0%;
-  background: var(--color--009853);
+  background: #ff6600;
   z-index: 1;
   border-radius: 16px;
 }
@@ -37,7 +37,7 @@
 }
 
 .btn-link-arrow {
-  background: var(--color--009853);
+  background: #fff;
   width: 34px;
   min-width: 34px;
   height: 34px;
@@ -47,8 +47,8 @@
   background: #fff;
 }
 .btn-link-arrow-icon {
-  fill: #fff;
+  fill: #3b61b8;
 }
 .btn-link:hover .btn-link-arrow-icon {
-  fill: var(--color--009853);
+  fill: #3b61b8;
 }

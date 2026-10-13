@@ -341,7 +341,7 @@ export const WorkData = [
         title: "Full-time",
       },
     ],
-    cnt: "We are looking for an experienced Senior Global Business Development Manager to expand and maintain partnerships in global exchanges, forex, gaming, and betting industries",
+    cnt: "We are looking for an experienced Senior Global Business Development Manager to expand and maintain partnerships in global exchanges, forex, gaming, and betting industries...",
     href: "/Join",
   },
   {

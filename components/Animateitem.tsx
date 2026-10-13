@@ -3,13 +3,18 @@ import { ReactNode } from "react";
 interface FadeUpScaleInProps {
   children: ReactNode;
   className?: string;
+  delay?: number;
 }
-export const FadeIn = ({ children, className = "" }: FadeUpScaleInProps) => {
+export const FadeIn = ({
+  children,
+  className = "",
+  delay = 0,
+}: FadeUpScaleInProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.85, translateY: 40 }}
       whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay }}
       style={{ transformOrigin: "bottom center" }}
       className={className}
     >
@@ -25,6 +30,23 @@ export const FadeText = ({ children, className = "" }: FadeUpScaleInProps) => {
       whileInView={{ opacity: 1, scale: 1, translateY: 0 }}
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       style={{ transformOrigin: "left" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+export const FadeUPText = ({
+  children,
+  className = "",
+  delay = 0,
+}: FadeUpScaleInProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, translateY: 40 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay }}
       className={className}
     >
       {children}

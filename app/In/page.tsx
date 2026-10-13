@@ -1,3 +1,4 @@
+"use client";
 import { PageWrap } from "@/components/PageWrap";
 import { PrimaryTitle, MediumTitle } from "@/components/Text";
 import { Image } from "@heroui/image";
@@ -12,11 +13,12 @@ export default function InPage() {
       <div className="country-head-bg  min-h-[596px] md:min-h-[660px] md:mb-[149px] mb-[68px] md:pt-[240px] pt-[30px]   bg-[url('/images/join/3.png')]">
         <PageWrap>
           <FadeText>
-            <PrimaryTitle align="text-left text-[#fff]" title="Your career." />
-            <PrimaryTitle
-              align="text-left text-[#fff]"
-              title="You  might be the perfect. "
-            />
+            <PrimaryTitle align="text-left text-[#fff]">
+              Your career.
+            </PrimaryTitle>
+            <PrimaryTitle align="text-left text-[#fff]">
+              You might be the perfect.
+            </PrimaryTitle>
             <div className="text-[12px] leading-[18px] mt-[25px] md:text-[20px] md:leading-[36px] md:mt-[36px] max-w-[555px]">
               Search jobs by category to find a position and a team where you
               can make an impact.
@@ -26,17 +28,19 @@ export default function InPage() {
       </div>
       <PageWrap>
         <FadeIn>
-          <div className="md:flex items-center justify-between mb-[78px] md:mb-[168px]">
-            <div className="flex-1 md:min-w-[340px] lg:min-w-[500px] md:pr-[20px]">
-              <div className="md:max-w-[714px] mb-[15px] md:mb-[40px] ">
+          <div className="mb-[78px] grid grid-cols-1 items-center gap-x-[48px] md:mb-[168px] md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+            <div className="w-full min-w-0">
+              <div className="mb-[15px] md:mb-[40px]">
                 <PrimaryTitle
                   align="text-left"
-                  title="Shape the future of commerce with LegendPayer."
-                  className=" lg:!text-6xl lg:!leading-[4.25rem] md:!text-[22px]  md:!leading-[30px]"
-                />
+                  className=" lg:!text-6xl lg:!leading-[4.25rem] md:!text-[22px]  md:!leading-[30px] !font-normal"
+                >
+                  Shape the future of commerce with{" "}
+                  <span className="text-[#FF6600]">PaylinkUS.</span>
+                </PrimaryTitle>
               </div>
               <MediumTitle
-                className="max-w-[671px] mb-[38px] md:mb-0 md:text-[18px] lg:text-xl  !text-[#3A3A3A]"
+                className="mb-[38px] md:mb-0 md:text-[18px] lg:text-xl !text-[#3A3A3A]"
                 align="text-left"
                 title="We believe groundbreaking innovation starts with exceptional people. That’s why we provide personalized benefits supporting every life stage, empowering you to thrive at work and beyond. Ready to leave your mark? Join us in redefining what’s possible."
               />
@@ -44,7 +48,8 @@ export default function InPage() {
             <Image
               isZoomed
               classNames={{
-                img: "w-full min-h-[199px]  md:max-w-[744px] md:max-h-[443px] rounded-none",
+                wrapper: "w-full min-w-0",
+                img: "h-auto min-h-[199px] w-full rounded-none",
               }}
               alt="picture"
               height="100%"
@@ -54,17 +59,19 @@ export default function InPage() {
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="md:flex items-center justify-between mb-[78px] md:mb-[168px] flex-row-reverse">
-            <div className="flex-1 md:min-w-[340px] lg:min-w-[500px]   md:pl-[48px]">
-              <div className="md:max-w-[711px] mb-[15px] md:mb-[40px]">
+          <div className="mb-[78px] grid grid-cols-1 items-center gap-x-[48px] md:mb-[168px] md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+            <div className="w-full min-w-0 md:order-2">
+              <div className="mb-[15px] md:mb-[40px]">
                 <PrimaryTitle
-                  className="md:!text-[22px] md:!leading-[32px]  lg:!text-6xl lg:!leading-[4.25rem] "
+                  className="md:!text-[22px] md:!leading-[32px]  lg:!text-6xl lg:!leading-[4.25rem] !font-normal"
                   align="text-left"
-                  title="Employee wellness drives everything we do."
-                />
+                >
+                  <span className="text-[#FF6600]"> Employee wellness </span>
+                  drives everything we do.
+                </PrimaryTitle>
               </div>
               <MediumTitle
-                className="max-w-[668px] mb-[38px] md:mb-0 md:text-[18px] lg:text-xl !text-[#3A3A3A]"
+                className="mb-[38px] md:mb-0 md:text-[18px] lg:text-xl !text-[#3A3A3A] "
                 align="text-left"
                 title="We invest in your holistic well-being with benefits and resources designed to help you thrive."
               />
@@ -72,7 +79,8 @@ export default function InPage() {
             <Image
               isZoomed
               classNames={{
-                img: "w-full min-h-[199px] md:max-w-[741px]  md:max-h-[443px] rounded-none",
+                wrapper: "w-full min-w-0 md:order-1",
+                img: "h-auto min-h-[199px] w-full rounded-none",
               }}
               alt="country"
               height="100%"
@@ -86,7 +94,7 @@ export default function InPage() {
           className="mb-[20px] md:mb-[55px]"
           title={
             <>
-              <span className="text-[#06421D]"> Careers/</span>
+              <span className="text-[#3B61B8]"> Careers/</span>
               Job category
             </>
           }
@@ -97,7 +105,7 @@ export default function InPage() {
             {WorkData.map((i) => (
               <div
                 key={i.id}
-                className="flex flex-col justify-between bg-[#E4F3EC] rounded-2xl px-[12px] md:px-[24px] pt-[17px] pb-[27px] md:pt-[33px] pb-[30px]"
+                className="flex flex-col justify-between bg-[#F0F5FF] rounded-2xl px-[12px] md:px-[24px] pt-[17px]  md:pt-[33px] pb-[30px]"
               >
                 <div>
                   <div className="font-medium text-[#000000] text-[15px] leading-[20px] md:text-[32px] md:leading-[50px] mb-[9px] md:mb-[27px]">
@@ -107,7 +115,7 @@ export default function InPage() {
                     {i.tags.map((t) => (
                       <div
                         key={t.id}
-                        className="line-clamp-1 mb-[8px]  bg-[#06421D] text-[#fff] md:px-[16px] px-[12px] py-[5px]  md:py-[10px] md:py-[4px] rounded-full text-[12px] leading-[12px] md:text-[14px] md:leading-[16px]  mr-[15px]"
+                        className="line-clamp-1 mb-[8px]  bg-[#3B61B8] text-[#fff] md:px-[16px] px-[12px] py-[5px]   md:py-[4px] rounded-full text-[12px] leading-[12px] md:text-[14px] md:leading-[16px]  mr-[15px]"
                       >
                         {t.title}
                       </div>
@@ -141,7 +149,7 @@ export default function InPage() {
                   key={i.id}
                 >
                   <MediumTitle
-                    textColor="text-[#06421D] "
+                    textColor="text-[#3B61B8] "
                     align="text-left"
                     title="View more"
                     className="mr-[4px] md:mr-[10px]"
@@ -171,7 +179,7 @@ export default function InPage() {
                           width="25.3238"
                           height="25.3238"
                           fill="#D9D9D9"
-                          stroke="#009853"
+                          stroke="#3B61B8"
                         />
                       </mask>
                       <g mask="url(#mask0_1578_433)">
@@ -201,7 +209,7 @@ export default function InPage() {
         </FadeIn>
 
         <FadeIn>
-          <div className="country-head-bg md:pt-[46px] md:pl-[44px]  md:max-w-[1500px] md:h-[469px] md:bg-[url('/images/join/2.png')] md:rounded-[20px]">
+          <div className="country-head-bg md:pt-[46px] md:pl-[44px]  md:max-w-[1200px] md:h-[469px] md:bg-[url('/images/join/2.png')] md:rounded-[20px]">
             <div className=" font-semibold text-[32px] leading-[37px] md:text-[64px] md:leading-[68px] text-white md:mb-[72px]  mb-[40px]">
               <FadeText className="text-[#000000] md:text-[#fff]">
                 Join now and enjoy
@@ -227,7 +235,7 @@ export default function InPage() {
                         cx="16.2879"
                         cy="16.2879"
                         r="16.2879"
-                        fill="#06421D"
+                        fill="#FF6600"
                       />
                       <g id="Frame">
                         <path
@@ -241,7 +249,7 @@ export default function InPage() {
                       </g>
                     </g>
                   </svg>
-                  <div className=" text-[#000000] md:text-[#fff] tracking-[-1px] flex-1 px-[20px] md:max-w-[228px] text-[12px]  md:text-[16px] leading-[21px]">
+                  <div className=" text-[#000000] md:text-[#fff]  flex-1 px-[20px] md:max-w-[228px] text-[12px]  md:text-[16px] leading-[21px]">
                     {i.title}
                   </div>
                 </div>

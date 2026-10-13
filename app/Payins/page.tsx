@@ -4,85 +4,70 @@ import { CardOne } from "@/components/CardOne";
 import { CardFour } from "@/components/CardFour";
 import { FortyEightTitle } from "@/components/Text";
 import { Image } from "@heroui/image";
-import { PageWrap } from "@/components/PageWrap";
-import { PrimaryTitle, SubTitle } from "@/components/Text";
+import { PageContanier, PageWrap } from "@/components/PageWrap";
 import { Button } from "@heroui/button";
-import NextLink from "next/link";
-import { FadeText } from "@/components/Animateitem";
+import { FadeUPText } from "@/components/Animateitem";
 import GlobeBlock from "@/components/GlobeThree";
+
+const FirstItem = () => {
+  return (
+    <div className="h-full w-full">
+      <PageContanier className="flex-1 items-center justify-center pb-[40px] md:flex">
+        <div className="flex-1 pt-[30px] md:pt-0">
+          <FadeUPText className="mb-[22px] text-[32px] font-semibold leading-[37px] text-white md:mb-[33px] md:max-w-[469px] md:text-[20px] md:leading-[40px] lg:text-[33px] lg:leading-[53px] xl:text-[48px] xl:leading-[68px] 2xl:max-w-[569px]">
+            Localized payment processing solutions
+          </FadeUPText>
+          <FadeUPText
+            delay={0.1}
+            className="mb-[38px] text-white md:mb-[46px] md:max-w-[420px] md:text-[16px] md:leading-[24px]"
+          >
+            We offer localized payment solutions to support your business
+            growth.
+          </FadeUPText>
+          <FadeUPText delay={0.2}>
+            <Button
+              className="h-[30px] w-[131px] bg-[#FF6600] text-[12px] text-[#142442] md:h-[48px] md:w-[240px] md:text-[20px]"
+              radius="full"
+            >
+              Start now
+            </Button>
+          </FadeUPText>
+        </div>
+        <GlobeBlock />
+      </PageContanier>
+    </div>
+  );
+};
 
 export default function PayinsPage() {
   return (
     <div className="w-full cursor-pointer">
-      <div className="relative payins-page bg-center  min-h-[546px] md:min-h-[824px]  rounded-none  md:pb-[31px] bg-[url('/images/20250512-175703.png')]">
-        <PageWrap>
-          <div className="lg:flex flex-row lg:justify-between">
-            <NextLink
-              className="block flex-1 pt-[30px]  md:pt-[135px]"
-              href={{
-                pathname: "/About",
-                query: { type: "1" },
-                hash: "concat",
-              }}
-            >
-              <FadeText>
-                <PrimaryTitle
-                  align="text-left"
-                  className="md:max-w-[804px] mb-[20px] md:mb-[46px] text-[#fff]"
-                  title="Localized payment processing solutions"
-                ></PrimaryTitle>
-              </FadeText>
-              <FadeText>
-                <SubTitle
-                  className="mb-[38px]  md:mb-[46px] md:max-w-[500px] text-[#fff]"
-                  align="text-left"
-                  title="We offer localized payment solutions to support your business growth."
-                />
-              </FadeText>
-              <FadeText>
-                <Button
-                  className="w-[131px] md:w-[240px] h-[30px] md:h-[48px]  text-white bg-[#06421D] text-[12px] md:text-[20px]"
-                  radius="full"
-                >
-                  Start now
-                </Button>
-              </FadeText>
-            </NextLink>
-            <GlobeBlock />
-          </div>
-        </PageWrap>
+      <div className="relative bg-[url('/images/20250512-175703.png')] bg-cover bg-center bg-no-repeat">
+        <FirstItem />
       </div>
-      <NextLink
-        className="block"
-        href={{
-          pathname: "/About",
-          query: { type: "1" },
-          hash: "concat",
-        }}
-      >
-        <div className="mb-[38px] md:mb-[189px]">
-          <BgText
-            title="Country-specific solutions"
-            sub={
-              <>
-                By integrating LegendPayer, you gain access to all major markets
-                in Latin America, Asia, the Middle East.{" "}
-                <span className="hidden lg:inline">
-                  {" "}
-                  <br />{" "}
-                </span>{" "}
-                We handle all currency conversions, payments, marketing
-                localization, legal issues, and anti-fraud activities to ensure{" "}
-                <span className="hidden lg:inline">
-                  {" "}
-                  <br />{" "}
-                </span>{" "}
-                smooth market entry and growth for our merchants.
-              </>
-            }
-          />
-        </div>
-
+      <div>
+        <BgText
+          title="Country-specific solutions"
+          sub={
+            <>
+              By integrating PaylinkUS, you gain access to all major markets in
+              Latin America, Asia, the Middle East.{" "}
+              <span className="hidden lg:inline">
+                {" "}
+                <br />{" "}
+              </span>{" "}
+              We handle all currency conversions, payments, marketing
+              localization, legal issues, and anti-fraud activities to ensure{" "}
+              <span className="hidden lg:inline">
+                {" "}
+                <br />{" "}
+              </span>{" "}
+              smooth market entry and growth for our merchants.
+            </>
+          }
+        />
+      </div>
+      <div className="bg-[#F0F5FF] pt-[38px] md:pt-[189px] pb-[102px] md:pb-[264px]">
         <div className="mb-[49px] md:mb-[221px] mx-auto px-[20px]">
           <div className="w-full flex items-center justify-center lg:mb-[77px] mb-[28px]">
             <div className="flex w-[131px]  md:w-[335px] md:max-w-[380px]">
@@ -139,38 +124,38 @@ export default function PayinsPage() {
             </div>
           </div>
         </div>
-        <div className="mb-[102px] md:mb-[264px]  max-w-[1500px]  mx-auto px-[20px] md:px-[60px] box-content">
+        <div className="  max-w-[1200px]  mx-auto px-[20px] md:px-[60px] box-content">
           <CardFour />
         </div>
+      </div>
 
-        <div className="mb-[34px] md:mb-[189px]">
-          <BgText
-            title={
-              <>
-                Your business
-                <span className="inline md:hidden">
-                  <br />
-                </span>
-                growth engine
-              </>
-            }
-            sub={
-              <>
-                Our cloud payment platform adopts financial-grade security
-                architecture design, supports elastic expansion{" "}
-                <span className="hidden lg:inline">
-                  {" "}
-                  <br />{" "}
-                </span>{" "}
-                and creates an industry-leading API ecosystem for merchants.
-              </>
-            }
-          />
-        </div>
-        <div className="mb-[82px] md:mb-[252px]  max-w-[1500px]  mx-auto px-[20px] md:px-[60px] box-content">
-          <CardOne />
-        </div>
-      </NextLink>
+      <div className="mb-[34px] md:mb-[189px]">
+        <BgText
+          title={
+            <>
+              Your business
+              <span className="inline md:hidden">
+                <br />
+              </span>
+              growth engine
+            </>
+          }
+          sub={
+            <>
+              Our cloud payment platform adopts financial-grade security
+              architecture design, supports elastic expansion{" "}
+              <span className="hidden lg:inline">
+                {" "}
+                <br />{" "}
+              </span>{" "}
+              and creates an industry-leading API ecosystem for merchants.
+            </>
+          }
+        />
+      </div>
+      <div className="mb-[82px] md:mb-[252px]  max-w-[1200px]  mx-auto px-[20px] md:px-[60px] box-content">
+        <CardOne />
+      </div>
 
       <PageWrap>
         <div className=" mb-[46px] md:mb-[208px]">

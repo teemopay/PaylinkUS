@@ -5,7 +5,7 @@ import { Image } from "@heroui/image";
 
 export const FooterBlock = () => {
   return (
-    <div className="pt-[27px] pb-[24px]  md:pt-[70px] md:pb-[63px] bg-[#06421D]">
+    <div className="pt-[27px] pb-[24px]  md:pt-[70px] md:pb-[63px] bg-[#1D2553]">
       <PageWrap>
         <div className="md:flex items-start justify-between pb-[34px] border-b-1 border-[rgba(255,255,255,0.1)]">
           <div className="relative flex-1 flex flex-col items-start justify-start h-full mb-[53px] md:mb-0 pb-[33px] md:pt-0">
@@ -16,7 +16,7 @@ export const FooterBlock = () => {
               >
                 <Image
                   classNames={{
-                    img: "max-w-[177px]  md:max-w-[339px]",
+                    img: "max-w-[177px]  md:max-w-[223px]",
                   }}
                   alt="logo"
                   height="100%"
@@ -26,23 +26,15 @@ export const FooterBlock = () => {
               </NextLink>
               <div className="text-[14px] leading-[21px] text-white pt-[11px] max-w-[612px] mt-[10px] md:mt-[22px]">
                 <div className="mb-2">
-                  Mexico: Paseo de la Reforma 1325, Lomas de Chapultepec, Miguel
-                  Hidalgo, 11000 CDMX
+                  Street Address:
+                  <br />
+                  Aegis Chambers, 1st Floor, Ellen Skelton Building, 3076 Sir
+                  Francis Drake's Highway, Road
                 </div>
                 <div className="mb-2">
-                  Singapore: 1 Raffles Place, Singapore 048616
-                </div>
-                <div className="mb-2">
-                  Pakistan: Office No 6, London Plaza, G 9 Markaz, Islamabad,
-                  Pakistan
-                </div>
-                <div className="mb-2">
-                  India ofhce address: Level 1-2.Crescent Building Lado
-                  Sarai,Mehrauli, New Delhi, Delhi 110030.India
-                </div>
-                <div>
-                  Bangladesh ofhce address: 75Mohakhali, Dhaka-1212, Bangladesh
-                  Nina
+                  PaylinkUS services are governed by PayLink Mango Ltd terms of
+                  service, subject to FinCEN MSB regulatory requirements, KYC &
+                  AML compliance procedures.
                 </div>
               </div>
             </div>
@@ -69,8 +61,8 @@ export const FooterBlock = () => {
             </div>
             <div className="md:hidden absolute bottom-0 left-0 w-full h-[1px] bg-[#D4D4E619]"></div>
             <div className="mt-4 text-[14px] leading-[21px] text-white">
-              Official email address: super@legendpayer.com <br />
-              Official telegram account: +66 9 6232 3372
+              Official Email：support@paylinkus.io <br />
+              Official Telegram：【official_paylinkus】
             </div>
           </div>
           <div className="md:pt-[10px] grid  grid-cols-2 md:grid-cols-3">
@@ -81,7 +73,7 @@ export const FooterBlock = () => {
                 </div>
                 {i.child.map((s) => (
                   <NextLink
-                    className="block a-color-hover text-[14px] leading-[21px] text-white mb-[12px] md:mb-[16px] "
+                    className="block a-color-hover text-[14px] leading-[21px] text-white mb-[12px] md:mb-[16px] opacity-50 "
                     key={s.id}
                     href={s.href}
                     target={s.target}
@@ -94,8 +86,9 @@ export const FooterBlock = () => {
           </div>
         </div>
       </PageWrap>
-      <div className="pt-[30px] md:pt-[47px] text-[12px] leading-[18px md:text-[14px] md:leading-[21px] text-white text-center">
-        Copyright ©️ 2024 LegendPayer - All rights reserved.
+      <div className="pt-[30px] md:pt-[47px] text-[12px] leading-[18px md:text-[14px] md:leading-[21px] text-white text-center opacity-50">
+        © PayLink Mango Ltd | PaylinkUS is operated by PayLink Mango Ltd,
+        holding FinCEN MSB license for United States money-service business.
       </div>
     </div>
   );

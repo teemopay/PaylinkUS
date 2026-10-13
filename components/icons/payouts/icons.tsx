@@ -19,7 +19,7 @@ export const PayinOne: React.FC<IconSvgProps> = ({ ...props }) => {
           cy="69.2075"
           rx="68.9496"
           ry="68.4536"
-          fill="#009853"
+          fill="#3B61B8"
         />
         <g id="Frame">
           <path

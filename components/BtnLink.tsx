@@ -13,7 +13,7 @@ export const BtnLink = () => {
           key={i.id}
         >
           <div className="btn-link-mask" />
-          <div className="btn-link-text px-[28px] md:px-[39px] lg:px-[20px] xl:px-[39px] flex items-center justify-between">
+          <div className="btn-link-text px-[20px]  flex items-center justify-between">
             <div className="flex-1 truncate text-[14px] md:text-[18px]  xl:text-[24px]">
               {i.label}
             </div>
