@@ -58,12 +58,12 @@ const IndustryData = [
 ];
 
 const inputWrapperClass =
-  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F0F5FF]";
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F0F5FF] group-data-[focus=true]:!border-[#3B61B8] data-[focus=true]:!border-[#3B61B8]";
 const textareaWrapperClass =
-  "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] group-data-[focus=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF]";
+  "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] group-data-[focus=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] group-data-[focus=true]:!border-[#3B61B8] data-[focus=true]:!border-[#3B61B8]";
 const inputClass = "!text-[#000000] placeholder:!text-[#BEBEBE]";
 const selectTriggerClass =
-  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] data-[open=true]:!bg-[#F0F5FF]";
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] data-[open=true]:!bg-[#F0F5FF] data-[focus=true]:!border-[#3B61B8] data-[open=true]:!border-[#3B61B8]";
 const selectValueClass =
   "!text-[#BEBEBE] group-data-[has-value=true]:!text-[#000000]";
 const selectItemClasses = [
@@ -262,7 +262,8 @@ export default function AboutPage() {
                       "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
-                    popoverContent: "bg-[#F0F5FF]",
+                    popoverContent:
+                      "bg-[#F0F5FF] border border-[#3B61B8]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -291,7 +292,8 @@ export default function AboutPage() {
                       "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
-                    popoverContent: "bg-[#F0F5FF]",
+                    popoverContent:
+                      "bg-[#F0F5FF] border border-[#3B61B8]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -323,7 +325,8 @@ export default function AboutPage() {
                       "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
-                    popoverContent: "bg-[#F0F5FF]",
+                    popoverContent:
+                      "bg-[#F0F5FF] border border-[#3B61B8]",
                     mainWrapper: "relative",
                     helperWrapper: "absolute top-full w-full",
                     errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
@@ -356,7 +359,7 @@ export default function AboutPage() {
                     "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                   trigger: selectTriggerClass,
                   value: selectValueClass,
-                  popoverContent: "bg-[#F0F5FF]",
+                  popoverContent: "bg-[#F0F5FF] border border-[#3B61B8]",
                   mainWrapper: "relative",
                   helperWrapper: "absolute top-full w-full",
                   errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",

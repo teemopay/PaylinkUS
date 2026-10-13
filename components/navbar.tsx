@@ -43,14 +43,14 @@ export const Navbar = () => {
     children.forEach((c) => c.classList.remove("active"));
   };
   return (
-    <div className="w-full fixed navbar top-0 left-0  h-[68px] md:h-[88px] bg-[#142442] z-[9999]">
+    <div className="w-full fixed navbar top-0 left-0  h-[68px] md:h-[88px] bg-[#1D2553] z-[9999]">
       {/* web端 */}
       <div
         className="hidden lg:block relative   w-full   h-[88px] "
         ref={wrapperRef}
       >
         <div className="w-full relative h-[88px] flex justify-center">
-          <div className="w-full relative h-full flex items-center justify-between max-w-[1200px] bg-[#142442]  md:mx-[60px] box-border">
+          <div className="w-full relative h-full flex items-center justify-between max-w-[1200px] bg-[#1D2553]  md:mx-[60px] box-border">
             <NextLink className="block max-w-[275px] cursor-pointer" href="/">
               <Image
                 className="max-w-[223px]"
@@ -146,7 +146,7 @@ export const Navbar = () => {
         </div>
       </div>
       {/* 移动端 */}
-      <div className=" lg:hidden h-full bg-[#142442] flex items-center justify-between px-[20px] cursor-pointer">
+      <div className=" lg:hidden h-full bg-[#1D2553] flex items-center justify-between px-[20px] cursor-pointer">
         <NextLink className="block cursor-pointer" href="/">
           <Image
             classNames={{

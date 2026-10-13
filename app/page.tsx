@@ -81,7 +81,7 @@ export default function Home() {
               <SubTitle
                 className="md:max-w-[917px] text-[#59616B]"
                 align="text-left"
-                title="Easily expand your business with PaisaPay’s professional payment solutions in countries and regions around the world."
+                title="Easily expand your business with PaylinkUS’s professional payment solutions in countries and regions around the world."
               />
             </FadeText>
           </div>
