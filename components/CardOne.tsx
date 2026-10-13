@@ -55,7 +55,7 @@ export const CardOne = () => {
                   {i.sub}
                 </div>
               </div>
-              <Icon className="max-w-[45px] md:max-w-[140px]  lg:max-w-[206px]" />
+              <Icon className="w-[46px] h-[46px] sm:w-[91px] sm:h-[91px] md:w-[137px] md:h-[137px] 2xl:w-[204px] 2xl:h-[204px] " />
             </div>
           </FadeIn>
         );

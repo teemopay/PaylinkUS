@@ -12,22 +12,6 @@ const iconDraw: Variants = {
   },
 };
 
-export function useIsSafari() {
-  const [isSafari, setIsSafari] = useState(false);
-
-  useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      const ua = navigator.userAgent;
-      const isSafariBrowser =
-        /Safari/.test(ua) && !/Chrome/.test(ua) && !/Chromium/.test(ua);
-
-      setIsSafari(isSafariBrowser);
-    }
-  }, []);
-
-  return isSafari;
-}
-
 export const PayinOne = ({ ...props }) => {
   return (
     <motion.svg
