@@ -1,17 +1,11 @@
 import { NextResponse } from "next/server";
 
-const LARK_WEBHOOK_URL =
-  "https://open.larksuite.com/open-apis/bot/v2/hook/20f31138-5cb2-42ef-88c2-3b9d33dd162d";
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { message } = body;
-    const mode = process.env.NEXT_PUBLIC_MODE;
     const LARK_WEBHOOK_URL =
-      mode === "development"
-        ? "https://open.larksuite.com/open-apis/bot/v2/hook/20f31138-5cb2-42ef-88c2-3b9d33dd162d"
-        : "https://open.larksuite.com/open-apis/bot/v2/hook/2ce52729-5331-40ca-9380-f07400baadb0";
+      "https://open.larksuite.com/open-apis/bot/v2/hook/c1bd7aab-5c65-49ce-9c88-e7e24d860bee";
     if (!message) {
       return NextResponse.json(
         { error: "Message cannot be empty" },
@@ -91,12 +85,12 @@ export async function POST(request: Request) {
           text: `How can PaylinkUS help your business? Feel free to ask anything: 【${help}】`,
         },
       ],
-      [
-        {
-          tag: "at",
-          user_id: "6g1d9371",
-        },
-      ],
+      // [
+      //   {
+      //     tag: "at",
+      //     user_id: "6g1d9371",
+      //   },
+      // ],
     ];
     const response = await fetch(LARK_WEBHOOK_URL, {
       method: "POST",
