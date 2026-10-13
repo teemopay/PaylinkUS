@@ -58,14 +58,14 @@ const IndustryData = [
 ];
 
 const inputWrapperClass =
-  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F0F5FF] group-data-[focus=true]:border-[#3B61B8] data-[focus=true]:border-[#3B61B8]";
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] bg-[#F0F5FF]";
 const textareaWrapperClass =
-  "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] group-data-[focus=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] group-data-[focus=true]:border-[#3B61B8] data-[focus=true]:border-[#3B61B8]";
+  "border-[#E9E9E9] border-[1px] h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] group-data-[focus=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF]";
 const inputClass = "!text-[#000000] placeholder:!text-[#BEBEBE]";
 const selectTriggerClass =
-  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] data-[open=true]:!bg-[#F0F5FF] data-[focus=true]:border-[#3B61B8] data-[open=true]:border-[#3B61B8]";
+  "border-[#E9E9E9] border-[1px] h-[42px] md:h-[60px] rounded-[8px] !bg-[#F0F5FF] data-[hover=true]:!bg-[#F0F5FF] data-[focus=true]:!bg-[#F0F5FF] data-[open=true]:!bg-[#F0F5FF]";
 const selectValueClass =
-  "!text-[#000000] data-[placeholder=true]:!text-[#BEBEBE] group-data-[has-value=false]:!text-[#BEBEBE]";
+  "!text-[#BEBEBE] group-data-[has-value=true]:!text-[#000000]";
 const selectItemClasses = [
   "rounded-sm",
   "text-[16px]",
@@ -78,8 +78,7 @@ const selectItemClasses = [
   "data-[selected=true]:text-white",
   "data-[pressed=true]:opacity-100",
 ];
-const checkboxWrapperClass =
-  "border-[#3B61B8] group-data-[selected=true]:border-[#3B61B8] group-data-[selected=true]:bg-[#3B61B8]";
+const checkboxWrapperClass = "";
 
 export default function AboutPage() {
   const [submitted, setSubmitted] = useState(null);
@@ -173,7 +172,7 @@ export default function AboutPage() {
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px]  md:!translate-y-[-70px] !text-[#000]",
+                      "after:text-[#000000] !text-[#000]   text-[12px] md:text-[18px] !translate-y-[-52px]  md:!translate-y-[-70px] ",
                     inputWrapper: inputWrapperClass,
                     input: inputClass,
                     mainWrapper: "relative",
@@ -193,7 +192,7 @@ export default function AboutPage() {
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
-                      "after:text-[#000]  text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     inputWrapper: inputWrapperClass,
                     input: inputClass,
                     mainWrapper: "relative",
@@ -215,7 +214,7 @@ export default function AboutPage() {
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     inputWrapper: inputWrapperClass,
                     input: inputClass,
                     mainWrapper: "relative",
@@ -235,7 +234,7 @@ export default function AboutPage() {
                   className="!mt-0 mb-[66px] md:mb-[89px]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     inputWrapper: inputWrapperClass,
                     input: inputClass,
                     mainWrapper: "relative",
@@ -257,10 +256,10 @@ export default function AboutPage() {
                   disableAnimation
                   label="Industry-contact us"
                   labelPlacement="outside"
-                  className="!mt-0 mb-[66px] md:mb-[89px]"
+                  className="!mt-0 mb-[66px] md:mb-[89px] text-[#BEBEBE]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
                     popoverContent: "bg-[#F0F5FF]",
@@ -286,10 +285,10 @@ export default function AboutPage() {
                 </Select>
                 <Select
                   disableAnimation
-                  className="!mt-0 mb-[66px] md:mb-[89px]"
+                  className="!mt-0 mb-[66px] md:mb-[89px] text-[#BEBEBE]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]  !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
                     popoverContent: "bg-[#F0F5FF]",
@@ -299,7 +298,7 @@ export default function AboutPage() {
                   }}
                   isRequired
                   items={KnowData}
-                  label="How did you get to know us?"
+                  label="How Did You Get To Know Us?*"
                   labelPlacement="outside"
                   placeholder="Select"
                   name="howGetToKnowUs"
@@ -318,10 +317,10 @@ export default function AboutPage() {
               <div className="w-full">
                 <Select
                   disableAnimation
-                  className="!mt-0 mb-[66px] md:mb-[89px]"
+                  className="!mt-0 mb-[66px] md:mb-[89px] text-[#BEBEBE]"
                   classNames={{
                     label:
-                      "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
+                      "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                     trigger: selectTriggerClass,
                     value: selectValueClass,
                     popoverContent: "bg-[#F0F5FF]",
@@ -331,7 +330,7 @@ export default function AboutPage() {
                   }}
                   isRequired
                   items={VolumeData}
-                  label="Monthly potential volume"
+                  label="Monthly Potential Volume"
                   placeholder="Select"
                   name="monthlyPotentialVolume"
                   labelPlacement="outside"
@@ -351,10 +350,10 @@ export default function AboutPage() {
               <Select
                 disableAnimation
                 isRequired
-                className="!mt-0 mb-[66px] md:mb-[52px]"
+                className="!mt-0 mb-[66px] md:mb-[52px] text-[#BEBEBE]"
                 classNames={{
                   label:
-                    "after:text-[#000] text-[12px]  md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px] !text-[#000]",
+                    "after:text-[#000000] !text-[#000] text-[12px] md:text-[18px] !translate-y-[-52px] md:!translate-y-[-70px]",
                   trigger: selectTriggerClass,
                   value: selectValueClass,
                   popoverContent: "bg-[#F0F5FF]",
@@ -363,7 +362,7 @@ export default function AboutPage() {
                   errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
                 }}
                 items={NeedData}
-                label="Which solutions do you need?"
+                label="Which Solutions Do You Need?"
                 labelPlacement="outside"
                 placeholder="Select"
                 name="solutionsNeed"
@@ -471,7 +470,7 @@ export default function AboutPage() {
                   errorMessage: "text-[#FF4C4C] text-[12px] md:text-[14px]",
                 }}
                 className="w-full mb-[18px] md:mb-[52px]"
-                label="How can PaylinkUS help your business? Feel free to ask anything."
+                label="How Can PaylinkUS Help Your Business? Feel Free To Ask Anything."
                 labelPlacement="outside"
                 name="help"
                 errorMessage="Please Enter"

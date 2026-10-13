@@ -310,7 +310,7 @@ export default function PayputsPage() {
           </FadeText>
           <FadeText>
             <SubTitle
-              className="mb-[38px]  md:mb-[46px] md:max-w-[500px] text-[#D1D1D1]"
+              className="mb-[38px]  md:mb-[46px] md:max-w-[450px] text-[#D1D1D1]"
               align="text-left"
               title="Send payouts to the local accounts of your customers and partners quickly"
             />
