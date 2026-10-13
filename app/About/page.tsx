@@ -303,6 +303,7 @@ export default function AboutPage() {
                   placeholder="Select"
                   name="howGetToKnowUs"
                   errorMessage="Please Select "
+                  variant="bordered"
                   listboxProps={{
                     itemClasses: {
                       base: selectItemClasses,
@@ -335,6 +336,7 @@ export default function AboutPage() {
                   name="monthlyPotentialVolume"
                   labelPlacement="outside"
                   errorMessage="Please Select "
+                  variant="bordered"
                   listboxProps={{
                     itemClasses: {
                       base: selectItemClasses,
@@ -367,6 +369,7 @@ export default function AboutPage() {
                 placeholder="Select"
                 name="solutionsNeed"
                 errorMessage="Please Select "
+                variant="bordered"
                 listboxProps={{
                   itemClasses: {
                     base: selectItemClasses,
@@ -462,6 +465,7 @@ export default function AboutPage() {
 
               <Textarea
                 isRequired
+                variant="bordered"
                 classNames={{
                   label:
                     "after:text-[#000] text-[#fff]  text-[12px] md:text-[18px] pb-[13px] md:pb-[10px] !text-[#000]",
