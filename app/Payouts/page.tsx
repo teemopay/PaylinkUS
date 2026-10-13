@@ -640,9 +640,11 @@ export default function PayputsPage() {
               <div className="md:flex  md:gap-[41px] gap-[20px]">
                 <div className="md:max-w-[622px] md:max-h-[761px]">
                   <div className="md:min-h-[349px] md:max-h-[349px]  md:mb-[41px]  bg-[#F0F5FF] rounded-2xl px-[12px] lg:px-[61px] pt-[26px] lg:pt-[61px] pb-[20px] lg:pb-[69px] mb-[20px] text-[#000000]">
-                    <div className="font-medium text-[20px] md:text-[35px] md:leading-[36px]  lg:text-[34px] lg:leading-[43px]  xl:text-[60px] leading-[24px] xl:leading-[70px] mb-[1px] md:mb-[58px] xl:mb-[30px]">
-                      Faster Payouts, Lower Costs
-                    </div>
+                    <LarageTitle
+                      title=" Faster Payouts, Lower Costs"
+                      align="text-left"
+                      className="xl:mb-[20px] text-[#000000]"
+                    />
                     <div className="text-[14px] md:text-[32px] leading-[24px] md:leading-[38px]  text-[#3B61B8]">
                       Global Payouts
                     </div>

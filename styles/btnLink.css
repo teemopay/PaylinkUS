@@ -1,5 +1,6 @@
 .btn-link {
   position: relative;
+  isolation: isolate;
   background: #3b61b8;
   border-radius: 16px;
   cursor: pointer;
@@ -12,14 +13,14 @@
 
 .btn-link-mask {
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  height: 100%;
-  width: 0%;
+  inset: -1px;
+  opacity: 1;
   background: #ff6600;
   z-index: 1;
-  border-radius: 16px;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
 }
 .btn-link-text {
   position: absolute;
@@ -32,8 +33,7 @@
 }
 
 .btn-link:hover .btn-link-mask {
-  width: 100%;
-  opacity: 1;
+  transform: scaleX(1);
 }
 
 .btn-link-arrow {
